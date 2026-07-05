@@ -8,7 +8,7 @@ A hospital waiting room follows a first come, first served order. Patients who a
 
 FIFO means First In, First Out. The first item added is the first one removed. In PatientQueue, the earliest patient added is the first one served, since patients are only added at the rear and only removed from the front.
 
-## 3. Explain what could happen if a stack was used instead of a queue in Part 1.
+## 3. Explain what could happen if a stack was used instead of a queue.
 
 A stack is LIFO, Last In, First Out. The most recently added item comes out first. If the waiting room used a stack, the last patient to walk in would be served first, and earlier patients could end up waiting indefinitely while new arrivals keep going ahead of them. That's the opposite of fair treatment in a waiting room.
 
