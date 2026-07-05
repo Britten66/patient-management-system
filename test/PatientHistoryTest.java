@@ -13,9 +13,9 @@ public class PatientHistoryTest {
         history.addRecord(new PatientRecord(LocalDate.of(2026, 2, 1), "Cold", "Fluids"));
 
         history.showOldest();
-        history.goToPrevious(); // should print message, not crash
+        history.goToPrevious();
 
-        assertTrue(true); // reaching this line means no exception was thrown
+        assertTrue(true);
     }
 
     @Test

@@ -1,5 +1,18 @@
 
+
+// Author Christopher Britten
+//SD15
+
 import java.time.LocalDate;
+
+
+/**
+ This class represents a single patient in the system.
+ It stores basic identifying information: an ID, first and last name,
+ a phone number, a date of birth, and the reason for the visit.
+ It does not contain any queue or list logic, it is purely a data holder.
+ PatientQueue stores objects of this class inside its nodes.
+**/
 
 public class Patient {
     private int id;

@@ -1,6 +1,16 @@
 
 import java.time.LocalDate;
 
+// Author Christopher Britten
+//SD15
+/**
+ This class represents a single patient history record.
+ It stores the visit date, diagnosis, and treatment notes for one visit.
+ Like Patient, this class has no navigation or list logic in it, it only
+ holds data. PatientHistory stores objects of this class inside its nodes.
+**/
+
+
 public class PatientRecord {
     private LocalDate visitDate;
     private String diagnosis;

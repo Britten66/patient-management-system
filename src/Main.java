@@ -1,8 +1,18 @@
 
 import java.time.LocalDate;
 import java.util.Scanner;
+// Author Christopher Britten
+//SD15
 
+/**
+ * This class contains the program's entry point and the console menu.
+ * It does not contain any queue or linked list logic itself, it only reads
+ * user input with Scanner and calls methods on PatientQueue and
+ * PatientHistory to do the actual work.
+ */
 public class Main {
+
+
     public static void main(String[] args) {
         PatientQueue waitingRoom = new PatientQueue();
         PatientHistory history = new PatientHistory();
@@ -102,6 +112,14 @@ public class Main {
         System.out.println("9. Exit");
         System.out.print("Choose an option: ");
     }
+
+
+    /**
+     * loadSampleHistory() preloads 10 sample PatientRecord entries into
+     * PatientHistory so the history navigation features can be tested
+     * immediately when the program starts.
+     */
+
 
     private static void loadSampleHistory(PatientHistory history) {
         history.addRecord(new PatientRecord(LocalDate.of(2026, 1, 5), "Flu", "Rest and fluids"));

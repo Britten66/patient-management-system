@@ -1,4 +1,22 @@
 
+// Author Christopher Britten
+//SD15
+// here are some notes I carried over
+
+/**
+ This class is a custom built Queue, written from scratch without
+ using any of Java's built in collection classes like LinkedList or ArrayDeque.
+ It represents the hospital waiting room.
+ Patients are added to the back with addPatient() and removed from the
+ front with servePatient(), which follows the FIFO principle.
+ It also supports insertAtPosition(), which allows a patient to be placed
+ at a specific spot in the line for emergency cases, and this breaks the
+ strict FIFO rule on purpose to handle urgent patients.
+ Internally it uses a private Node class with a single next pointer,
+ since a queue only ever needs to move forward through the line.
+**/
+
+
 public class PatientQueue {
 
     private class Node {
