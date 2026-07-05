@@ -1,15 +1,24 @@
+package com.project.patient;
 
-//Author: Christopher Britten
-// DSA 2026
+import java.time.LocalDate;
 
 public class Patient {
     private int id;
-    private String name;
+    private String firstName;
+    private String lastName;
+    private String phoneNumber;
+    private LocalDate dateOfBirth;
     private String reasonForVisit;
 
-    public Patient(int id, String name, String reasonForVisit) {
+    public Patient() {
+    }
+
+    public Patient(int id, String firstName, String lastName, String phoneNumber, LocalDate dateOfBirth, String reasonForVisit) {
         this.id = id;
-        this.name = name;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.dateOfBirth = dateOfBirth;
         this.reasonForVisit = reasonForVisit;
     }
 
@@ -17,16 +26,58 @@ public class Patient {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getReasonForVisit() {
         return reasonForVisit;
     }
 
+    public void setReasonForVisit(String reasonForVisit) {
+        this.reasonForVisit = reasonForVisit;
+    }
+
     @Override
     public String toString() {
-        return "Patient #" + id + " - " + name + " (" + reasonForVisit + ")";
+        return "Patient - " +
+                "Id:" + id +
+                ", First Name: " + firstName + '\'' +
+                ", Last Name: " + lastName + '\'' +
+                ", Phone Number: " + phoneNumber + '\'' +
+                ", Date of Birth: " + dateOfBirth +
+                ", Reason for Visit: " + reasonForVisit + '\'';
     }
 }
