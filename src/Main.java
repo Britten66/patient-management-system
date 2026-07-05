@@ -1,3 +1,9 @@
+import com.project.patient.Patient;
+import com.project.patient.PatientQueue;
+import com.project.patient.PatientRecord;
+import com.project.patient.PatientHistory;
+
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main {
@@ -17,11 +23,15 @@ public class Main {
                 case "1":
                     System.out.print("Patient ID: ");
                     int id = Integer.parseInt(scanner.nextLine().trim());
-                    System.out.print("Name: ");
-                    String name = scanner.nextLine().trim();
+                    System.out.print("First Name: ");
+                    String fname = scanner.nextLine().trim();
+                    System.out.print("Last Name: ");
+                    String lname = scanner.nextLine().trim();
+                    System.out.print("Phone Number: ");
+                    String phone = scanner.nextLine().trim();
                     System.out.print("Reason for visit: ");
                     String reason = scanner.nextLine().trim();
-                    waitingRoom.addPatient(new Patient(id, name, reason));
+                    waitingRoom.addPatient(new Patient(id, fname, lname, phone, LocalDate.now(), reason));
                     System.out.println("Patient added to the waiting room.");
                     break;
 
@@ -35,13 +45,17 @@ public class Main {
                 case "3":
                     System.out.print("Patient ID: ");
                     int eid = Integer.parseInt(scanner.nextLine().trim());
-                    System.out.print("Name: ");
-                    String ename = scanner.nextLine().trim();
+                    System.out.print("First Name: ");
+                    String efname = scanner.nextLine().trim();
+                    System.out.print("Last Name: ");
+                    String elname = scanner.nextLine().trim();
+                    System.out.print("Phone Number: ");
+                    String ephone = scanner.nextLine().trim();
                     System.out.print("Reason for visit: ");
                     String ereason = scanner.nextLine().trim();
                     System.out.print("Insert at position: ");
                     int pos = Integer.parseInt(scanner.nextLine().trim());
-                    waitingRoom.insertAtPosition(new Patient(eid, ename, ereason), pos);
+                    waitingRoom.insertAtPosition(new Patient(eid, efname, elname, ephone, LocalDate.now(), ereason), pos);
                     break;
 
                 case "4":
@@ -94,15 +108,15 @@ public class Main {
     }
 
     private static void loadSampleHistory(PatientHistory history) {
-        history.addRecord(new PatientRecord("2026-01-05", "Flu", "Rest and fluids"));
-        history.addRecord(new PatientRecord("2026-01-20", "Sprained ankle", "Ice and compression"));
-        history.addRecord(new PatientRecord("2026-02-10", "Migraine", "Prescribed pain medication"));
-        history.addRecord(new PatientRecord("2026-02-28", "Allergic reaction", "Antihistamines given"));
-        history.addRecord(new PatientRecord("2026-03-15", "Broken wrist", "Cast applied"));
-        history.addRecord(new PatientRecord("2026-04-02", "Common cold", "Rest advised"));
-        history.addRecord(new PatientRecord("2026-04-25", "Ear infection", "Antibiotics prescribed"));
-        history.addRecord(new PatientRecord("2026-05-10", "Back pain", "Physiotherapy referral"));
-        history.addRecord(new PatientRecord("2026-06-01", "High blood pressure", "Medication adjusted"));
-        history.addRecord(new PatientRecord("2026-06-20", "Routine checkup", "No issues found"));
+        history.addRecord(new PatientRecord(LocalDate.of(2026, 1, 5), "Flu", "Rest and fluids"));
+        history.addRecord(new PatientRecord(LocalDate.of(2026, 1, 20), "Sprained ankle", "Ice and compression"));
+        history.addRecord(new PatientRecord(LocalDate.of(2026, 2, 10), "Migraine", "Prescribed pain medication"));
+        history.addRecord(new PatientRecord(LocalDate.of(2026, 2, 28), "Allergic reaction", "Antihistamines given"));
+        history.addRecord(new PatientRecord(LocalDate.of(2026, 3, 15), "Broken wrist", "Cast applied"));
+        history.addRecord(new PatientRecord(LocalDate.of(2026, 4, 2), "Common cold", "Rest advised"));
+        history.addRecord(new PatientRecord(LocalDate.of(2026, 4, 25), "Ear infection", "Antibiotics prescribed"));
+        history.addRecord(new PatientRecord(LocalDate.of(2026, 5, 10), "Back pain", "Physiotherapy referral"));
+        history.addRecord(new PatientRecord(LocalDate.of(2026, 6, 1), "High blood pressure", "Medication adjusted"));
+        history.addRecord(new PatientRecord(LocalDate.of(2026, 6, 20), "Routine checkup", "No issues found"));
     }
 }
