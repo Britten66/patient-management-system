@@ -1,7 +1,3 @@
-import com.project.patient.Patient;
-import com.project.patient.PatientQueue;
-import com.project.patient.PatientRecord;
-import com.project.patient.PatientHistory;
 
 import java.time.LocalDate;
 import java.util.Scanner;

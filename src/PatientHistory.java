@@ -1,4 +1,3 @@
-package com.project.patient;
 
 public class PatientHistory {
 
