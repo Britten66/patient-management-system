@@ -1,3 +1,5 @@
+package com.project.patient;
+
 public class PatientHistory {
 
     private class Node {
@@ -21,9 +23,6 @@ public class PatientHistory {
         tail = null;
         current = null;
     }
-
-//new record will be init here !
-//for the record for patrtient
 
     public void addRecord(PatientRecord record) {
         Node newNode = new Node(record);
